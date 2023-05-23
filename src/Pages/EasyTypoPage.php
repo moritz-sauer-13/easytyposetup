@@ -10,6 +10,11 @@ class EasyTypoPage extends \Page{
     private static $plural_name = 'EasyTypoPages';
     private static $description = 'Hiermit kann eine Übersicht ausgegeben werden, in der alle relevanten Typographischen Elemente ausgegeben werden um diese übersichtlich zu stylen.';
 
+    private static $defaults = array(
+        'ShowInMenus' => false,
+        'ShowInSearch' => false
+    );
+
     public function canCreate($member = null, $context = [])
     {
         if(Director::isDev()){
